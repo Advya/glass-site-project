@@ -29,6 +29,7 @@ main {
 	display: flex;
 	align-content: center;
 	justify-content: center;
+	
 }
 
 .glass {
@@ -42,6 +43,7 @@ main {
 	 z-index: 2;
 	 backdrop-filter: blur(2rem);
 	display: flex;
+	margin: 1% 0;
 }
 
 .circle1, .circle2 {
@@ -104,7 +106,82 @@ main {
 }
 .games {
 	flex: 2;
-	
 }
 
 /* GAMES */
+
+.status {
+	margin-bottom: 3rem;
+}
+.status input {
+	background: linear-gradient(to right bottom,
+	 rgba(255, 255, 255, 0.7),
+	 rgba(255, 255, 255, 0.5));
+	 border: none;
+	 width: 50%;
+	 padding: 0.5rem;
+	 border-radius: 2rem;
+}
+.games {
+	margin: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.card {
+	display: flex;
+	background: linear-gradient(
+	to left top, 
+	rgba(255,255,255,1),
+	rgba(255,255,255,0.8));
+	border-radius: 1rem;
+	margin: 2rem 0rem;
+	padding: 2rem;
+	box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
+	justify-content: space-between;
+}
+.progress1,
+.progress2,
+.progress3 {
+	background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+	width: 100%;
+	height: 25%;
+	border-radius: 2rem;
+	position: relative;
+	overflow: hidden;
+}
+.progress1::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgb(236, 236, 236);
+	position: absolute;
+	left: 60%;
+}
+.progress2::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgb(236, 236, 236);
+	position: absolute;
+	left: 80%;
+}
+.progress3::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgb(236, 236, 236);
+	position: absolute;
+	left: 35%;
+}
+.card-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.percentage {
+	font-weight: bold;
+	background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
